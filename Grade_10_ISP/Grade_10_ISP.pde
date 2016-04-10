@@ -1,6 +1,7 @@
 RGBY_Dice cDice = new RGBY_Dice();
 restriction_dice rDice = new restriction_dice();
 operation_dice oDice = new operation_dice ();
+number_dice nDice = new number_dice ();
 void setup() { 
   frameRate(10);
   size(1200, 700);
@@ -8,7 +9,26 @@ void setup() {
 }
 
 void draw() {
-  background(103, 0, 24);
+  background(125, 0, 24);
+  fill(255, 200, 0);
+  noStroke();
+  rect(5, 5, 948, 348);
+  stroke(255);
+  strokeWeight(12);
+  noFill();
+  rect(5, 5, 950, 450);
+  line(0, 350, 950, 350);
+  line(317, 0, 317, 348);
+  line(633, 0, 633, 348);
+  strokeWeight(6);
+  line(620, 447, 950, 447);
+  fill(255);
+  textSize(24);
+  text("Forbidden", 100, 35);
+  text("Permitted", 417, 35);
+  text("Required", 733, 35);
+  textSize(50);
+  text("GOAL:", 470, 448);
   cDice.xyCoordinates(975, 25);
   cDice.xyCoordinates(1050, 25);
   cDice.xyCoordinates(1125, 25);
@@ -24,6 +44,9 @@ void draw() {
   oDice.xyCoordinates(975, 325);
   oDice.xyCoordinates(1050, 325);
   oDice.xyCoordinates(1125, 325);
+  nDice.xyCoordinates(975, 400);
+  nDice.xyCoordinates(1050, 400);
+  nDice.xyCoordinates(1125, 400);
 }
 
 void mousePressed() {
