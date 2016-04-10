@@ -3,7 +3,7 @@ class RGBY_Dice {
   void RGBY_Dice () {
   }
 
-  void xyCoordinates(int xAxis, int yAxis) {
+  void RGBY_Dice(int xAxis, int yAxis) {
     //dice
     noStroke();
     fill(245, 241, 222);
