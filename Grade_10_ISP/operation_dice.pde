@@ -1,4 +1,4 @@
-class RGBY_Dice {
+class operation_dice {
 
   void xyCoordinates(int xAxis, int yAxis) {
     //dice
@@ -10,19 +10,23 @@ class RGBY_Dice {
     int side = int(random(1, 7));
     if (side == 1 || side == 3 ) {
       fill(255, 0, 0);
-      ellipse(xAxis+25, yAxis+25, 25, 25);
+      textSize(24);
+      text("U", xAxis+17, yAxis+30);
     }
     if (side == 2 || side == 4 ) {
-      fill(0, 0, 255);
-      ellipse(xAxis+25, yAxis+25, 25, 25);
+      fill(255, 0, 0);
+      textSize(24);
+      text( "Ω", xAxis+17, yAxis+30);
     }
     if (side == 5) {
-      fill(0, 255, 0);
-      ellipse(xAxis+25, yAxis+25, 25, 25);
+      fill(255, 0, 0);
+      textSize(24);
+      text("-", xAxis+17, yAxis+30);
     }
     if (side == 6) {
-      fill(255, 255, 0);
-      ellipse(xAxis+25, yAxis+25, 25, 25);
+      fill( 255, 0, 0);
+      textSize(24);
+      text("'", xAxis+17, yAxis+30);
     }
 
     //roll
