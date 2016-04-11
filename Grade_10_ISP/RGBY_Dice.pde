@@ -1,7 +1,8 @@
 class RGBY_Dice {
 
+  //drawing colored dice
   void xyCoordinates(int xAxis, int yAxis) {
-    //dice
+  //drawing the ractangular part of the dice
     noStroke();
     fill(245, 241, 222);
     rect(xAxis, yAxis, 50, 50, 10);

@@ -1,15 +1,24 @@
+ //giving all of the classes variable names, so they can be drawn later on in this draw loop
 RGBY_Dice cDice = new RGBY_Dice();
 restriction_dice rDice = new restriction_dice();
 operation_dice oDice = new operation_dice ();
 number_dice nDice = new number_dice ();
+
+//setting up the canvas
 void setup() { 
   frameRate(10);
+    
+    //drawing the canvas
   size(1200, 700);
   noLoop();
 }
 
+
+//drawing the background, game board and dice
 void draw() {
   background(125, 0, 24);
+ 
+  //drawing the game board
   fill(255, 200, 0);
   noStroke();
   rect(5, 5, 948, 348);
@@ -29,6 +38,8 @@ void draw() {
   text("Required", 733, 35);
   textSize(50);
   text("GOAL:", 470, 448);
+  
+  //drawing the dice
   cDice.xyCoordinates(975, 25);
   cDice.xyCoordinates(1050, 25);
   cDice.xyCoordinates(1125, 25);
@@ -49,6 +60,8 @@ void draw() {
   nDice.xyCoordinates(1125, 400);
 }
 
+
+// making mouse reset so it can be clicked again after it has been clicked
 void mousePressed() {
   loop();
 }
