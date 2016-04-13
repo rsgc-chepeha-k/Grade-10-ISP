@@ -16,7 +16,7 @@ class restriction_dice {
     if (side == 2 || side == 4 ) {
       fill(0, 0, 255);
       textSize(24);
-      text( "ç", xAxis+17, yAxis+30);
+      text( "C", xAxis+17, yAxis+30);
     }
     if (side == 5) {
       fill(0, 0, 255);
