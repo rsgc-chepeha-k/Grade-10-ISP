@@ -1,8 +1,9 @@
- //giving all of the classes variable names, so they can be drawn later on in this draw loop
+6  //giving all of the classes variable names, so they can be drawn later on in this draw loop
 RGBY_Dice cDice = new RGBY_Dice();
 restriction_dice rDice = new restriction_dice();
 operation_dice oDice = new operation_dice ();
 number_dice nDice = new number_dice ();
+color_cards cCard = new color_cards ();
 
 //setting up the canvas
 void setup() { 
@@ -58,6 +59,7 @@ void draw() {
   nDice.xyCoordinates(975, 400);
   nDice.xyCoordinates(1050, 400);
   nDice.xyCoordinates(1125, 400);
+  cCard.xyCoordinates(1,475);
 }
 
 
