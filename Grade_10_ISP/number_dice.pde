@@ -1,4 +1,6 @@
 class number_dice {
+  
+
   //drawing colored dice
   void xyCoordinates(int xAxis, int yAxis) {
     //drawing the rectangular part of the dice

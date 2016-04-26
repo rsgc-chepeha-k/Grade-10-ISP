@@ -3,11 +3,14 @@ RGBY_Dice cDice = new RGBY_Dice();
 restriction_dice rDice = new restriction_dice();
 operation_dice oDice = new operation_dice ();
 number_dice nDice = new number_dice ();
-color_cards cCard = new color_cards ();
+//giving all of the classes variable names, so they can be drawn later on in this draw loop, aswell as selecting the number of cards to be crawn
+color_cards cCard = new color_cards (12);
 
 //setting up the canvas
 void setup() { 
   frameRate(10);
+  
+  cCard.chooseRandom();
     
     //drawing the canvas
   size(1200, 700);
@@ -59,7 +62,12 @@ void draw() {
   nDice.xyCoordinates(975, 400);
   nDice.xyCoordinates(1050, 400);
   nDice.xyCoordinates(1125, 400);
-  cCard.xyCoordinates(1,475);
+  //Calling the function to draw each card
+  for(int i = 0; i < cCard._numberOfCards; i++)
+  {
+  //drawing each card
+    cCard.xyCoordinates(i * 50, 475, i);
+  }
 }
 
 
