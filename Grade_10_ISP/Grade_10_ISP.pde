@@ -14,13 +14,19 @@ void setup() {
     
     //drawing the canvas
   size(1200, 700);
-  noLoop();
+  
+ 
+ nDice.chooseRandom();
+ oDice.randomize();
+ cDice.chooseRandoms();
+ rDice.chooseRandoms();
 }
 
 
 //drawing the background, game board and dice
 void draw() {
   background(125, 0, 24);
+  
  
   //drawing the game board
   fill(255, 200, 0);
@@ -44,34 +50,37 @@ void draw() {
   text("GOAL:", 470, 448);
   
   //drawing the dice
-  cDice.xyCoordinates(975, 25);
-  cDice.xyCoordinates(1050, 25);
-  cDice.xyCoordinates(1125, 25);
-  cDice.xyCoordinates(975, 100);
-  cDice.xyCoordinates(1050, 100);
-  cDice.xyCoordinates(1125, 100);
-  cDice.xyCoordinates(975, 175);
-  cDice.xyCoordinates(1050, 175);
-  rDice.xyCoordinates(1125, 175);
-  rDice.xyCoordinates(975, 250);
-  rDice.xyCoordinates(1050, 250);
-  oDice.xyCoordinates(1125, 250);
-  oDice.xyCoordinates(975, 325);
-  oDice.xyCoordinates(1050, 325);
-  oDice.xyCoordinates(1125, 325);
-  nDice.xyCoordinates(975, 400);
-  nDice.xyCoordinates(1050, 400);
-  nDice.xyCoordinates(1125, 400);
+  cDice.xyCoordinates(975, 25, 0);
+  cDice.xyCoordinates(1050, 25, 1);
+  cDice.xyCoordinates(1125, 25, 2);
+  cDice.xyCoordinates(975, 100, 3);
+  cDice.xyCoordinates(1050, 100, 4);
+  cDice.xyCoordinates(1125, 100, 5);
+  cDice.xyCoordinates(975, 175, 6);
+  cDice.xyCoordinates(1050, 175, 7);
+  rDice.xyCoordinates(1125, 175, 0);
+  rDice.xyCoordinates(975, 250, 1);
+  rDice.xyCoordinates(1050, 250, 2);
+  oDice.xyCoordinates(1125, 250, 0);
+  oDice.xyCoordinates(975, 325, 1);
+  oDice.xyCoordinates(1050, 325, 2);
+  oDice.xyCoordinates(1125, 325, 3);
+  nDice.xyCoordinates(975, 400, 0);
+  nDice.xyCoordinates(1050, 400, 1);
+  nDice.xyCoordinates(1125, 400, 1);
   //Calling the function to draw each card
   for(int i = 0; i < cCard._numberOfCards; i++)
   {
   //drawing each card
     cCard.xyCoordinates(i * 50, 475, i);
   }
+  
+
+
 }
 
 
 // making mouse reset so it can be clicked again after it has been clicked
 void mousePressed() {
-  loop();
+  //noLoop();
 }

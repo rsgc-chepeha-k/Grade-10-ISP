@@ -14,7 +14,8 @@ class color_cards {
   //drawing colored card
   void xyCoordinates(int xAxis, int yAxis, int whichCard) {
     //drawing the ractangular part of the dice
-    noStroke();
+    stroke(0);
+    strokeWeight(1);
     fill(245, 241, 222);
     rect(xAxis, yAxis, 50, 100, 10);
 
@@ -36,9 +37,7 @@ class color_cards {
       ellipse(xAxis+25, yAxis+87, 20, 20);
     }
 
-    //roll
-    if (mousePressed && mouseButton == LEFT)
-      noLoop();
+
   }
   //This is looping through every value in the aray aswell as making sure no integers are repeatedly being Selected
   void chooseRandom()
