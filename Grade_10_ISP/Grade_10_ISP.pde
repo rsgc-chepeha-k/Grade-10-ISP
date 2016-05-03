@@ -6,6 +6,49 @@ number_dice nDice = new number_dice ();
 //giving all of the classes variable names, so they can be drawn later on in this draw loop, aswell as selecting the number of cards to be crawn
 color_cards cCard = new color_cards (12);
 
+boolean hasCard = false;
+
+int c1x = 975;
+int c1y = 25;
+int c2x = 1050;
+int c2y = 25;
+int c3x = 1125;
+int c3y = 25;
+int c4x = 975;
+int c4y = 100;
+int c5x = 1050;
+int c5y = 100;
+int c6x = 1125;
+int c6y = 100;
+int c7x = 975;
+int c7y = 175;
+int c8x = 1050;
+int c8y = 175;
+
+int r1x = 1125;
+int r1y = 175;
+int r2x = 975;
+int r2y = 250;
+int r3x = 1050;
+int r3y = 250;
+
+int o1x = 1125;
+int o1y = 250;
+int o2x = 975;
+int o2y = 325;
+int o3x = 1050;
+int o3y = 325;
+int o4x = 1125;
+int o4y = 325;
+
+int n1x = 975;
+int n1y = 400;
+int n2x = 1050;
+int n2y = 400;
+int n3x = 1125;
+int n3y = 400;
+
+boolean c1, c2, c3, c4, c5, c6, c7, c8, r1, r2, r3, o1, o2, o3, o4, n1, n2, n3;
 //setting up the canvas
 void setup() { 
   frameRate(10);
@@ -50,24 +93,24 @@ void draw() {
   text("GOAL:", 470, 448);
   
   //drawing the dice
-  cDice.xyCoordinates(975, 25, 0);
-  cDice.xyCoordinates(1050, 25, 1);
-  cDice.xyCoordinates(1125, 25, 2);
-  cDice.xyCoordinates(975, 100, 3);
-  cDice.xyCoordinates(1050, 100, 4);
-  cDice.xyCoordinates(1125, 100, 5);
-  cDice.xyCoordinates(975, 175, 6);
-  cDice.xyCoordinates(1050, 175, 7);
-  rDice.xyCoordinates(1125, 175, 0);
-  rDice.xyCoordinates(975, 250, 1);
-  rDice.xyCoordinates(1050, 250, 2);
-  oDice.xyCoordinates(1125, 250, 0);
-  oDice.xyCoordinates(975, 325, 1);
-  oDice.xyCoordinates(1050, 325, 2);
-  oDice.xyCoordinates(1125, 325, 3);
-  nDice.xyCoordinates(975, 400, 0);
-  nDice.xyCoordinates(1050, 400, 1);
-  nDice.xyCoordinates(1125, 400, 1);
+  cDice.xyCoordinates(c1x, c1y, 0);
+  cDice.xyCoordinates(c2x, c2y, 1);
+  cDice.xyCoordinates(c3x, c3y, 2);
+  cDice.xyCoordinates(c4x, c4y, 3);
+  cDice.xyCoordinates(c5x, c5y, 4);
+  cDice.xyCoordinates(c6x, c6y, 5);
+  cDice.xyCoordinates(c7x, c7y, 6);
+  cDice.xyCoordinates(c8x, c8y, 7);
+  rDice.xyCoordinates(r1x, r1y, 0);
+  rDice.xyCoordinates(r2x, r2y, 1);
+  rDice.xyCoordinates(r3x, r3y, 2);
+  oDice.xyCoordinates(o1x, o1y, 0);
+  oDice.xyCoordinates(o2x, o2y, 1);
+  oDice.xyCoordinates(o3x, o3y, 2);
+  oDice.xyCoordinates(o4x, o4y, 3);
+  nDice.xyCoordinates(n1x, n1y, 0);
+  nDice.xyCoordinates(n2x, n2y, 1);
+  nDice.xyCoordinates(n3x, n3y, 1);
   //Calling the function to draw each card
   for(int i = 0; i < cCard._numberOfCards; i++)
   {
@@ -75,12 +118,143 @@ void draw() {
     cCard.xyCoordinates(i * 50, 475, i);
   }
   
-
+  if(c1)
+  {
+   c1x = mouseX;
+   c1y = mouseY;
+  }else if(c2)
+  {
+    c2x = mouseX;
+    c2y = mouseY;
+  }else if(c3)
+  {
+    c3x = mouseX;
+    c3y = mouseY;
+  }else if(c4)
+  {
+    c4x = mouseX;
+    c4y = mouseY;
+  }else if(c5)
+  {
+    c5x = mouseX;
+    c5y = mouseY;
+  }else if(c6)
+  {
+    c6x = mouseX;
+    c6y = mouseY;
+  }else if(c7)
+  {
+    c7x = mouseX;
+    c7y = mouseY;
+  }else if(c8)
+  {
+    c8x = mouseX;
+    c8y = mouseY;
+  }else if(r1)
+  {
+    r1x = mouseX;
+    r1y = mouseY;
+  }else if(r2)
+  {
+    r2x = mouseX;
+    r2y = mouseY;
+  }else if(r3)
+  {
+    r3x = mouseX;
+    r3y = mouseY;
+  }else if(o1)
+  {
+    o1x = mouseX;
+    o1y = mouseY;
+  }else if(o2)
+  {
+    o2x = mouseX;
+    o2y = mouseY;
+  }else if(o3)
+  {
+    o3x = mouseX;
+    o3y = mouseY;
+  }else if(o4)
+  {
+    o4x = mouseX;
+    o4y = mouseY;
+  }else if(n1)
+  {
+    n1x = mouseX;
+    n1y = mouseY;
+  }else if(n2)
+  {
+    n2x = mouseX;
+    n2y = mouseY;
+  }else if(n3)
+  {
+    n3x = mouseX;
+    n3y = mouseY;
+  }
 
 }
 
 
 // making mouse reset so it can be clicked again after it has been clicked
-void mousePressed() {
-  //noLoop();
+void mousePressed() 
+{
+  if(!hasCard)
+  {
+    hasCard = true;
+    if(mouseY > 25 && mouseY < 50)
+    {
+      if(mouseX > 975 && mouseX < 1000)c1 = true;
+      else if(mouseX > 1050 && mouseX < 1075)c2 = true;
+      else if(mouseX > 1125 && mouseX < 1150)c3 = true;
+    }else if(mouseY > 100 && mouseY < 125)
+    {
+      if(mouseX > 975 && mouseX < 1000)c4 = true;
+      else if(mouseX > 1050 && mouseX < 1075)c5 = true;
+      else if(mouseX > 1125 && mouseX < 1150)c6 = true;
+    }else if(mouseY > 175 && mouseY < 200)
+    {
+      if(mouseX > 975 && mouseX < 1000)c7 = true;
+      else if(mouseX > 1050 && mouseX < 1075)c8 = true;
+      else if(mouseX > 1125 && mouseX < 1150)r1 = true;
+    }else if(mouseY > 250 && mouseY < 275)
+    {
+      if(mouseX > 975 && mouseX < 1000)r2 = true;
+      else if(mouseX > 1050 && mouseX < 1075)r3 = true;
+      else if(mouseX > 1125 && mouseX < 1150)o1 = true;
+    }else if(mouseY > 325 && mouseY < 350)
+    {
+      if(mouseX > 975 && mouseX < 1000)o2 = true;
+      else if(mouseX > 1050 && mouseX < 1075)o3 = true;
+      else if(mouseX > 1125 && mouseX < 1150)o4 = true;
+    }else if(mouseY > 400 && mouseY < 425)
+    {
+      if(mouseX > 975 && mouseX < 1000)n1 = true;
+      else if(mouseX > 1050 && mouseX < 1075)n2 = true;
+      else if(mouseX > 1125 && mouseX < 1150)n3 = true;
+    }
+  }else if(hasCard)
+  {
+    hasCard = false;
+    c1 = false;
+    c2 = false;
+    c3 = false;
+    c4 = false;
+    c5 = false;
+    c6 = false;
+    c7 = false;
+    c8 = false;
+    
+    r1 = false;
+    r2 = false;
+    r3 = false;
+    
+    o1 = false;
+    o2 = false;
+    o3 = false;
+    o4 = false;
+    
+    n1 = false;
+    n2 = false;
+    n3 = false;
+  }
 }
