@@ -1,6 +1,6 @@
 class operation_dice {
   //drawing colored dice
-  
+  //holds which dice are selected
   int randoms[] = new int[4];
   void xyCoordinates(int xAxis, int yAxis, int whichRandoms) {
     //drawing the rectangular part of the dice
@@ -31,10 +31,10 @@ class operation_dice {
       text("'", xAxis+17, yAxis+30);
     }
 
-    //roll
+
    
   }
-  
+    // randomly selecting which dice to display
   void randomize()
   {
     for(int i = 0; i < 4; i++)

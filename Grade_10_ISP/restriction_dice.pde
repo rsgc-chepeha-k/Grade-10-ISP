@@ -1,6 +1,6 @@
 class restriction_dice {
   //drawing restriction dice
-  
+    //holds which dice are selected
   int randoms[] = new int[3];
   void xyCoordinates(int xAxis, int yAxis, int whichRandoms) {
     //drawing the rectangular part of the dice
@@ -33,7 +33,7 @@ class restriction_dice {
 
 
   }
-  
+    // randomly selecting which dice to display
   void chooseRandoms()
   {
    for(int i = 0; i < 3; i++)

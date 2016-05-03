@@ -1,5 +1,5 @@
 class RGBY_Dice {
-  
+  //holds which dice are selected
   int randoms[] = new int[8];
 
   //drawing colored dice
@@ -30,7 +30,7 @@ class RGBY_Dice {
 
  
   }
-  
+  // randomly selecting which dice to display
   void chooseRandoms()
   {
    for(int i = 0; i < 8; i++)

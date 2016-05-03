@@ -1,5 +1,5 @@
 class number_dice {
-  
+  //holds which dice and how many are selected
   int randoms[] = new int[3];
   
 
@@ -39,7 +39,7 @@ class number_dice {
       text("5", xAxis+17, yAxis+30);
     }
   }
-  
+  //randomly selecting which dice to display
   void chooseRandom()
   {
    for(int i = 0; i < 3; i++)
